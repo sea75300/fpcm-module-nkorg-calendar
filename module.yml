@@ -1,0 +1,16 @@
+## Module config file
+---
+key: nkorg/calendar
+author: imagine
+name: Calendar
+description: "Calendar module"
+link: https://nobody-knows.org/
+version: 1.0.11
+help: 
+requirements:
+    system: 5.2.0-a1
+    php: 8.0.0
+tables:
+configOptions:
+    frontend_days: 30
+    dashboard_items: 10

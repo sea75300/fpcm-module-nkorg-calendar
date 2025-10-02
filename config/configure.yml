@@ -1,0 +1,14 @@
+## Module configure config
+---
+frontend_days:
+    type: numberInput
+    conf:
+        text: GUI_APPOINTMENT_FRONTEND_DAYS
+        icon: calendar
+        size: lg
+dashboard_items:
+    type: numberInput
+    conf:
+        text: GUI_APPOINTMENT_DASHBOARD_ITEMS
+        icon: gauge-high
+        size: lg
