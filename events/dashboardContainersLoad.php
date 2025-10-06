@@ -4,10 +4,11 @@ namespace fpcm\modules\nkorg\calendar\events;
 
 final class dashboardContainersLoad extends \fpcm\module\event {
 
-    public function run()
+    public function run() : \fpcm\module\eventResult
     {
         $this->data[] = '\fpcm\modules\nkorg\calendar\models\dashContainer';
-        return $this->data;
+        
+        return (new \fpcm\module\eventResult())->setData($this->data);
     }
 
     public function init() : bool
