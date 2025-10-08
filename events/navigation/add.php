@@ -4,7 +4,7 @@ namespace fpcm\modules\nkorg\calendar\events\navigation;
 
 final class add extends \fpcm\module\event {
 
-    public function run()
+    public function run() : \fpcm\module\eventResult
     {
         $item = (new \fpcm\model\theme\navigationItem())
                 ->setDescription($this->addLangVarPrefix('HEADLINE'))
@@ -12,7 +12,8 @@ final class add extends \fpcm\module\event {
                 ->setUrl('calendar/overview');
 
         $this->data->add(\fpcm\model\theme\navigationItem::AREA_AFTER, $item);
-        return $this->data;
+        
+        return (new \fpcm\module\eventResult())->setData($this->data);
     }
 
     public function init()

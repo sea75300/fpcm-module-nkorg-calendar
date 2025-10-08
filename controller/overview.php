@@ -45,7 +45,7 @@ final class overview extends \fpcm\controller\abstracts\module\controller {
         $this->view->addTabs('calendar', [
             (new \fpcm\view\helper\tabItem('main'))
                 ->setText($this->addLangVarPrefix('HEADLINE'))
-                ->setFile( \fpcm\view\view::PATH_COMPONENTS . 'dataview__inline.php' )
+                ->setFile( \fpcm\view\view::PATH_COMPONENTS . 'dataview_inline.php' )
         ]);
 
         $this->view->setFormAction('calendar/overview');

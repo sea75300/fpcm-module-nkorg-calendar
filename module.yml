@@ -5,11 +5,11 @@ author: imagine
 name: Calendar
 description: "Calendar module"
 link: https://nobody-knows.org/
-version: 1.0.11
+version: 1.5.0
 help: 
 requirements:
-    system: 5.2.0-a1
-    php: 8.0.0
+    system: 5.3.0-a1
+    php: 8.2.0
 tables:
 configOptions:
     frontend_days: 30
