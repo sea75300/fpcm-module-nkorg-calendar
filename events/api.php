@@ -2,30 +2,13 @@
 
 namespace fpcm\modules\nkorg\calendar\events;
 
-final class apiCallFunction extends \fpcm\module\event {
+final class api extends \fpcm\module\api {
 
     private int $start;
 
     private int $stop;
 
-    public function run() : \fpcm\module\eventResult
-    {
-        $fn = $this->data['name'];
-        if (!method_exists($this, $fn)) {
-            trigger_error('Function '.$fn.' does not exists!');
-            return false;
-        }
-
-        call_user_func([$this, $fn],$this->data['args']);
-        return true;
-    }
-
-    public function init()
-    {
-        return true;
-    }
-
-    final protected function display()
+    public function display()
     {
         $this->start = mktime(0, 0, 0);
         $this->stop = mktime(23, 59, 59);

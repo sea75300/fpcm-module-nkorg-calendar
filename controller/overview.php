@@ -27,7 +27,11 @@ final class overview extends \fpcm\controller\abstracts\module\controller {
         $this->delete();
 
         $this->view->addButtons([
-            (new \fpcm\view\helper\linkButton('appointmentAdd'))->setText($this->addLangVarPrefix('GUI_APPOINTMENT_ADD'))->setIcon('calendar-plus')->setUrl(\fpcm\classes\tools::getControllerLink('calendar/add')),
+            (new \fpcm\view\helper\linkButton('appointmentAdd'))
+                ->setText($this->addLangVarPrefix('GUI_APPOINTMENT_ADD'))
+                ->setIcon('calendar-plus')
+                ->setUrl(\fpcm\classes\tools::getControllerLink('calendar/add'))
+                ->setPrimary(),
             (new \fpcm\view\helper\deleteButton('appointmentDelete'))->setIcon('calendar-minus'),
         ]);
 
@@ -86,10 +90,10 @@ final class overview extends \fpcm\controller\abstracts\module\controller {
         return [
             (new \fpcm\components\dataView\column('select', ''))->setSize(1)->setAlign('center'),
             (new \fpcm\components\dataView\column('button', ''))->setSize(1)->setAlign('center'),
-            (new \fpcm\components\dataView\column('name', $this->addLangVarPrefix('GUI_APPOINTMENT_DESCRIPTION')))->setSize(4),
-            (new \fpcm\components\dataView\column('time', $this->addLangVarPrefix('GUI_APPOINTMENT_DATETIME')))->setSize(4)->setAlign('center'),
-            (new \fpcm\components\dataView\column('status', $this->addLangVarPrefix('GUI_APPOINTMENT_PENDING')))->setSize(1)->setAlign('center'),
-            (new \fpcm\components\dataView\column('visible', $this->addLangVarPrefix('GUI_APPOINTMENT_VISIBLE')))->setSize(1)->setAlign('center'),
+            (new \fpcm\components\dataView\column('name', $this->addLangVarPrefix('GUI_APPOINTMENT_DESCRIPTION'))),
+            (new \fpcm\components\dataView\column('time', $this->addLangVarPrefix('GUI_APPOINTMENT_DATETIME')))->setAlign('center'),
+            (new \fpcm\components\dataView\column('status', $this->addLangVarPrefix('GUI_APPOINTMENT_PENDING')))->setAlign('center'),
+            (new \fpcm\components\dataView\column('visible', $this->addLangVarPrefix('GUI_APPOINTMENT_VISIBLE')))->setAlign('center'),
         ];
 
     }
