@@ -6,8 +6,7 @@ final class dashboardContainersLoad extends \fpcm\module\event {
 
     public function run() : \fpcm\module\eventResult
     {
-        $this->data[] = '\fpcm\modules\nkorg\calendar\models\dashContainer';
-        
+        $this->data->addContainer('models\dashContainer');
         return (new \fpcm\module\eventResult())->setData($this->data);
     }
 
