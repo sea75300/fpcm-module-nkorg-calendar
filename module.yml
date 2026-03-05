@@ -5,7 +5,7 @@ author: imagine
 name: Calendar
 description: "Calendar module"
 link: https://nobody-knows.org/
-version: 1.5.0-a1
+version: 1.5.0-a2
 help: 
 requirements:
     system: 5.3.0-a1
